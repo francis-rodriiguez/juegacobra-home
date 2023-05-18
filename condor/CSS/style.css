@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  font-family: "Montserrat", sans-serif;
+  color: #07090b;
+}
+
+h1,
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+h4 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+p,
+li {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+section {
+  padding: 120px 80px 120px 80px;
+}
+
+button {
+  background-color: #faae18;
+  padding: 12px 30px 12px 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+ol {
+  list-style: none;
+}
+
+footer {
+  background-color: #0a0a0a;
+}
+
+ol {
+  list-style: none;
+  counter-reset: step;
+}
+li {
+  counter-increment: step;
+}
+li::before {
+  content: counter(step);
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 20px;
+  text-align: center;
+  margin-right: 20px;
+  background-color: #faae18;
+  color: white;
+}
+
+.contenedor-menu {
+  background-color: #031f3d;
+  display: grid;
+  grid-template-columns: 40% 35% 25%;
+  text-align: center;
+  align-items: center;
+  margin: 0px;
+  padding: 20px;
+}
+
+.opciones-menu-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.opciones-menu {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 40px;
+}
+
+.boton-menu1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.boton-menu1:hover {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px;
+  color: #faae18;
+  background-color: #031f3d;
+  border: 2px solid #faae18;
+}
+
+.boton-menu2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px;
+  color: #faae18;
+  background-color: #031f3d;
+  border: 2px solid #faae18;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.boton-menu2:hover {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 10px;
+  color: white;
+  background-color: #faae18;
+}
+
+.contenedor-botones {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 40px;
+}
+.slide1 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  background-image: url(../images/background-cobra1.jpg);
+  background-size: 100% 170%;
+}
+.slide2 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  background-color: #faae18;
+  align-items: center;
+  background-image: url(../images/background-cobra.jpg);
+  background-size: 100% 240%;
+}
+
+.slide3 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  background-color: #e3e9f0;
+  background-image: url(../images/background-cobra3.jpg);
+  background-size: cover;
+}
+.slide4 {
+  display: grid;
+  grid-template-columns: 50% auto;
+  background-color: #faae18;
+  background-image: url(../images/background-cobra.jpg);
+  background-size: cover;
+  padding-bottom: 40px;
+}
+.slide5 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.competencias-container {
+  background-color: #08223d;
+  display: flex;
+  justify-content: center;
+}
+
+.competencias {
+  background-color: #05284b;
+  padding: 20px 200px 20px 200px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  padding-right: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.links a:hover {
+  color: #faae18;
+}
+
+#overlay {
+  position: relative;
+  top: 20px;
+  left: -100px;
+  background-size: cover;
+}
