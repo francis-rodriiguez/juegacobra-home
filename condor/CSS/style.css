@@ -52,14 +52,11 @@ body {
   padding: 0px;
 }
 
-ol {
-  list-style: none;
-}
-
 footer {
   background-color: #0a0a0a;
 }
 
+/*
 ol {
   list-style: none;
   counter-reset: step;
@@ -79,6 +76,7 @@ li::before {
   background-color: #faae18;
   color: white;
 }
+*/
 
 .contenedor-menu {
   background-color: #031f3d;
@@ -107,6 +105,8 @@ li::before {
   display: flex;
   justify-content: flex-start;
   padding-left: 40px;
+  height: 8vh;
+  width: auto;
 }
 
 .boton-menu1 {
@@ -134,6 +134,7 @@ li::before {
   font-size: 13px;
   font-weight: 500;
   padding: 10px;
+  margin-left: 20px;
   color: #faae18;
   background-color: #031f3d;
   border: 2px solid #faae18;
@@ -155,6 +156,7 @@ li::before {
   justify-content: space-around;
   margin-right: 40px;
 }
+
 .slide1 {
   display: grid;
   grid-template-columns: 50% auto;
@@ -176,6 +178,7 @@ li::before {
   background-color: #e3e9f0;
   background-image: url(../images/background-cobra3.jpg);
   background-size: cover;
+  padding-bottom: 0px;
 }
 .slide4 {
   display: grid;
@@ -224,9 +227,161 @@ li::before {
   color: #faae18;
 }
 
-#overlay {
-  position: relative;
-  top: 20px;
-  left: -100px;
-  background-size: cover;
+#hombre_celebrando {
+  height: 100vh;
+  width: auto;
+}
+
+#cuentas {
+  height: 12vh;
+  width: auto;
+}
+
+#phone-balls {
+  height: 90vh;
+  width: auto;
+}
+
+#phone_champions {
+  height: 80vh;
+  width: auto;
+}
+
+#amigos-celebrando {
+  height: 80vh;
+  width: auto;
+}
+
+#borde-azul {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* For screens larger than 768px (e.g. small laptops) */
+@media (min-width: 768px) {
+}
+
+/* For screens smaller than 576px (e.g. smartphones) */
+@media (max-width: 576px) {
+  /*.menu {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .logo {
+    height: 2vh;
+    width: auto;
+  }
+
+  .menu-links {
+    flex-direction: column;
+    gap: 10px;
+  }*/
+
+  .logo {
+    height: 6vh;
+    width: auto;
+    margin-bottom: 15px;
+  }
+  h1,
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  h4 {
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  body {
+    text-align: center;
+  }
+
+  section {
+    padding: 50px 30px 50px 30px;
+  }
+
+  .slide1 {
+    grid-template-columns: auto;
+  }
+
+  .slide2 {
+    grid-template-columns: auto;
+  }
+
+  .slide2 > *:first-child {
+    order: 2;
+  }
+
+  .slide3 {
+    grid-template-columns: auto;
+    text-align: left;
+    background-size: 100% 70%;
+    background-repeat: no-repeat;
+  }
+
+  .slide4 {
+    grid-template-columns: auto;
+  }
+
+  .slide4 > *:first-child {
+    order: 2;
+  }
+
+  .competencias {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #group {
+    height: auto;
+    width: 100%;
+  }
+
+  #amigos-celebrando {
+    height: auto;
+    width: 100%;
+  }
+
+  #borde-azul {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    height: auto;
+    width: 100%;
+  }
+
+  #hombre_celebrando {
+    height: auto;
+    width: 100%;
+  }
+
+  #cuentas {
+    height: auto;
+    width: 100%;
+  }
+
+  #phone-balls {
+    height: auto;
+    width: 100%;
+  }
+
+  #phone_champions {
+    height: auto;
+    width: 100%;
+  }
 }
