@@ -7,60 +7,55 @@
     <title>Juega quinelas</title>
     <link rel="icon" href="images/logo.png" type="image/x-icon" />
     <link href="CSS/style.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/0bcebe315b.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <!--Prueba-->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark"
-      style="background-color: #031f3d"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="images/cobra-logo.png"
-            class="logo"
-            alt="cobra logo header"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cómo jugar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contáctanos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Soporte</a>
-            </li>
-          </ul>
-        </div>
-        <div class="contenedor-botones">
-          <button class="boton-menu1">Iniciar Sesión</button>
-          <button class="boton-menu2">Registrarse</button>
+    <header class="menu-desktop">
+      <div class="logo">
+        <img
+          src="images/cobra-logo.png"
+          style="height: 40px; width: auto"
+          alt="cobra logo header"
+        />
+      </div>
+      <div>
+        <div class="opciones-menu-container">
+          <a href="#" class="opciones-menu">Cómo jugar</a>
+          <a href="#" class="opciones-menu">Contáctanos</a>
+          <a href="#" class="opciones-menu">Soporte</a>
         </div>
       </div>
+      <div class="contenedor-botones">
+        <button class="boton-menu1">Iniciar Sesión</button>
+        <button class="boton-menu2">Registrarse</button>
+      </div>
+    </header>
+    <!--Nav rsponsive-->
+    <nav class="contenedor-menu">
+      <div class="logo">
+        <img
+          src="images/cobra-logo.png"
+          style="height: 40px; width: auto"
+          alt="cobra logo header"
+        />
+      </div>
+      <input class="checkbox" type="checkbox" />
+      <i class="icons fa-solid fa-bars" style="color: #f9ae17"></i>
+      <i class="icons fa-solid fa-x" style="color: #f9ae17"></i>
+      <ul class="opciones-menu-container">
+        <li><a href="#">Cómo jugar</a></li>
+        <li><a href="#">Contáctanos</a></li>
+        <li><a href="#">Soporte</a></li>
+      </ul>
+      <div class="contenedor-botones">
+        <button class="boton-menu1">Iniciar Sesión</button>
+        <button class="boton-menu2">Registrarse</button>
+      </div>
     </nav>
-    <!--fin Prueba-->
-
+    <!--Fin del Nav rsponsive-->
     <section class="slide1">
       <div>
         <h1>
@@ -158,15 +153,18 @@
       </div>
       <img src="images/borde-azul.png" id="borde-azul" />
     </section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
   </body>
   <footer class="slide5">
-    <span style="display: flex; justify-content: flex-start; padding-left: 40px"
-      ><p style="color: white">Cobra ® 2023</p></span
+    <p
+      style="
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        padding: 20px 0px 0px 40px;
+      "
+    >
+      Cobra ® 2023
+    </p>
     >
     <div class="links">
       <a href="https://juegacobra.com/terminos-y-condiciones/"

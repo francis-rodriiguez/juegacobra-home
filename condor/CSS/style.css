@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -17,10 +23,12 @@ h2 {
   font-size: 48px;
   font-weight: 700;
 }
+
 h3 {
   font-size: 20px;
   font-weight: 600;
 }
+
 h4 {
   font-size: 28px;
   font-weight: 700;
@@ -47,24 +55,19 @@ button {
   border: none;
 }
 
-body {
-  margin: 0px;
-  padding: 0px;
-}
-
 footer {
   background-color: #0a0a0a;
+  padding: 1em;
 }
 
-/*
-ol {
+.slide3 ol {
   list-style: none;
   counter-reset: step;
 }
-li {
+.slide3 li {
   counter-increment: step;
 }
-li::before {
+.slide3 li::before {
   content: counter(step);
   display: inline-block;
   border-radius: 50%;
@@ -76,9 +79,12 @@ li::before {
   background-color: #faae18;
   color: white;
 }
-*/
 
 .contenedor-menu {
+  display: none;
+}
+
+.menu-desktop {
   background-color: #031f3d;
   display: grid;
   grid-template-columns: 40% 35% 25%;
@@ -162,6 +168,7 @@ li::before {
   grid-template-columns: 50% auto;
   background-image: url(../images/background-cobra1.jpg);
   background-size: 100% 170%;
+  grid-row-gap: 4em;
 }
 .slide2 {
   display: grid;
@@ -170,6 +177,7 @@ li::before {
   align-items: center;
   background-image: url(../images/background-cobra.jpg);
   background-size: 100% 240%;
+  grid-row-gap: 4em;
 }
 
 .slide3 {
@@ -179,6 +187,7 @@ li::before {
   background-image: url(../images/background-cobra3.jpg);
   background-size: cover;
   padding-bottom: 0px;
+  grid-row-gap: 4em;
 }
 .slide4 {
   display: grid;
@@ -186,7 +195,6 @@ li::before {
   background-color: #faae18;
   background-image: url(../images/background-cobra.jpg);
   background-size: cover;
-  padding-bottom: 40px;
 }
 .slide5 {
   display: grid;
@@ -254,38 +262,14 @@ li::before {
 
 #borde-azul {
   position: absolute;
+  height: 60vh;
+  width: 100%;
   bottom: 0;
   left: 0;
   z-index: 1;
 }
 
-/* For screens larger than 768px (e.g. small laptops) */
-@media (min-width: 768px) {
-}
-
-/* For screens smaller than 576px (e.g. smartphones) */
-@media (max-width: 576px) {
-  /*.menu {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-  }
-
-  .logo {
-    height: 2vh;
-    width: auto;
-  }
-
-  .menu-links {
-    flex-direction: column;
-    gap: 10px;
-  }*/
-
-  .logo {
-    height: 6vh;
-    width: auto;
-    margin-bottom: 15px;
-  }
+@media (max-width: 768px) {
   h1,
   h2 {
     font-size: 32px;
@@ -314,6 +298,98 @@ li::before {
     padding: 50px 30px 50px 30px;
   }
 
+  /*menu hamburguesa*/
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .checkbox,
+  .icons {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .icons {
+    pointer-events: none;
+    font-size: 24px;
+  }
+
+  .checkbox {
+    opacity: 0;
+  }
+
+  .checkbox:not(:checked) ~ .fa-x {
+    display: none;
+  }
+
+  .checkbox:checked ~ .fa-bars {
+    display: none;
+  }
+
+  .checkbox:checked ~ .fa-x {
+    display: block;
+  }
+
+  .contenedor-menu {
+    background-color: #031f3d;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    text-align: justify;
+    align-items: flex-start;
+    margin: 0px;
+    padding: 2vh;
+    position: relative;
+    height: 18vh;
+  }
+
+  .opciones-menu-container {
+    display: none;
+    justify-content: space-evenly;
+    width: 20vh;
+    position: absolute;
+    top: 6vh;
+    right: 0px;
+  }
+
+  .opciones-menu-container li {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    list-style: none;
+  }
+
+  .opciones-menu-container li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px 12px;
+    background-color: white;
+  }
+  .opciones-menu-container li a:hover {
+    background-color: #faae18;
+  }
+
+  .checkbox:checked ~ .opciones-menu-container {
+    display: block;
+  }
+
+  .contenedor-botones {
+    position: absolute;
+    top: 10vh;
+    right: 1vh;
+  }
+
+  .checkbox:checked ~ .contenedor-botones {
+    display: none;
+  }
+
+  /*final del menu de hamburguesa*/
   .slide1 {
     grid-template-columns: auto;
   }
@@ -346,6 +422,11 @@ li::before {
     font-size: 16px;
   }
 
+  .logo {
+    height: 6vh;
+    width: auto;
+  }
+
   #group {
     height: auto;
     width: 100%;
@@ -361,7 +442,7 @@ li::before {
     bottom: 0;
     left: 0;
     z-index: 1;
-    height: auto;
+    height: 20vh;
     width: 100%;
   }
 
